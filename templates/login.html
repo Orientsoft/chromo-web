@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>染色体人工智能评价系统</title>
+  <link href="../static/img/favicon.png" rel="shortcut icon">
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../static/css/style.css?v={{v}}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="siginbg">
+      <div class="bgfff">    </div>
+  <div class="container">
+    <div class="row header">
+        <div class="col">
+          <h1 class="title"><a href="/"><img src="../static/img/logo-b.png" width="50">染色体人工智能评价系统</a></h1>
+        </div>
+    </div>
+      <div class="row">
+        <div class="col-6 p-t-60">
+    <div class="adcont">
+      不只是人工，<br>
+      更是一种高效AI新体验
+    </div>
+  </div>
+    <div class="col-6 ">
+    <div class="siginright" >
+      <div id="login_container">
+        <h1>请登录</h1>
+        {% with messages = get_flashed_messages() %}
+            <div class="alert alert-warning alert-dismissible fade show">{{ messages[0] }}</div>
+        {% endwith %}
+        <form action="{{ url_for('login') }}" method="POST">
+          <div class="form-group">
+             <label>用户名：</label>
+             <input type="text" name="username" id="username" placeholder="Username" class="form-control"></input>
+           </div>
+            <!-- <input type="text" name="username" id="username" placeholder="Username"></input> -->
+            <div class="form-group">
+               <label>密  码：</label>
+               <input type="password" name="password" id="password" placeholder="Password" class="form-control"></input>
+             </div>
+            <!-- <input type="password" name="password" id="password" placeholder="Password"></input> -->
+            <input type="submit" value="登录" name="submit" class="btn btn-primary btn-block m-t-10"></input>
+        </form>
+
+
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  <div class="footerbox">  {% include "layout/footer.html" %}</div>
+
+</div>
+
+  <script src="../static/js/jquery.min.js"></script>
+</body>
+
+</html>

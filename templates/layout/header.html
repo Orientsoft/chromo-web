@@ -1,0 +1,23 @@
+<div class="row header">
+    <div class="col">
+        <h1 class="title"><a href="/"><img src="../static/img/logo-b.png" width="50">染色体人工智能评价系统</a></h1>
+        <div class="popover-dismiss">
+            {% if user %}
+            <div class="dropdown show">
+                <a href="#" class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">{{ user.nickname }}
+                    <img src="{{ user.icon_url }}" alt="..." class="rounded-circle userlogin">
+                </a>
+                <div class="dropdown-menu" id="user-menu">
+                    <a class="dropdown-item" href="/history" style="color: black;">历史记录</a>
+                    <a class="dropdown-item" href="/logout" style="color: black;">退出登录</a>
+                </div>
+            </div>
+            {% else %}
+            <a href="/signin" id="login-btn">登录
+                <img src="../static/img/logo.png" alt="..." class="rounded-circle userlogin">
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
